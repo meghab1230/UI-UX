@@ -1,0 +1,228 @@
+/* .custom-card-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  /* Add additional styles as needed */
+ /* body{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  
+ 
+  /* .card-img-top {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+    
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    h5 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #1d1d1d;
+    }
+    
+    h6 {
+      color: #d8d8d8;
+    }
+    
+    hr {
+      width: 30px;
+      height: 2px;
+      background-color: #fb774b;
+    }
+    .navbar
+    {
+      font-size:16px; 
+    }
+    
+    .navbar .navbar-nav .nav-item .nav-link
+    {
+      padding:0 20px;
+      color:black;
+      transform:0.3s ease;
+    }
+    .navbar .navbar-nav .nav-icon{
+      font-size:0.75rem;
+      padding:0 7px;
+      cursor:pointer;
+      transition:0.3s ease;
+    }
+    
+    .logo-mode
+    {
+      height:70px;
+      width: 70px;
+      object-fit: fill;
+      border-radius: 50%;
+    }
+
+
+#product1{
+  text-align: center;
+}
+
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+
+
+}
+
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+#product1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+  height: 400px;
+}
+
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span{
+  color: #606063;
+  font-size: 12px;
+}
+
+#product1 .pro .des h5{
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+
+}
+
+#product1 .pro .des i{
+  font-size: 20px;
+  color:green;
+
+}
+
+#product1 .pro .des h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: maroon
+}
+
+#product1 .pro .crt
+ {
+  width:40px;
+  height:40px;
+  line-height:40px;
+  border-radius: 50px;
+  background-color:#e8f6ea;
+  border:1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  
+ }
+ 
+
+#product1 h2{
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body > footer
+{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+
+footer .col{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+
+}
+
+footer .logo{
+  margin-bottom: 30px;
+}
+footer h4{
+  font-size:14px ;
+  padding-bottom:20px;
+
+}
+footer p{
+  font-size:13px ;
+  margin:0 0 8px 0;
+}
+footer a{
+  font-size:13px ;
+  text-decoration:none;
+  color:#222;
+  margin-bottom:10px;
+}
+footer .follow
+{
+  margin-top: 20px;
+
+}
+footer .follow i
+{
+  color:#465b52;
+  padding-right:4px;
+  cursor: pointer;
+  
+}
+footer .follow i:hover,
+footer a:hover {
+  color:#088178;
+
+}
