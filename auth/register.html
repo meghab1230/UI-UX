@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="register-form">
+      <div class="input-group">
+        <label for="register-name">Name:</label>
+        <input type="text" id="register-name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="input-group">
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Register</button>
+      <p class="switch-form">Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+    <p id="success-message" style="color: green; display: none;">Registration successful! Redirecting to login...</p>
+    <p id="error-message" style="color: red; display: none;">An error occurred. Please try again.</p>
+  </div>
+
+  <script>
+    // Get the form element
+    const form = document.getElementById('register-form');
+
+    // Handle form submission
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get input values
+      const name = document.getElementById('register-name').value;
+      const email = document.getElementById('register-email').value;
+      const password = document.getElementById('register-password').value;
+
+      // Send POST request to the backend for registration
+      try {
+        const response = await fetch('http://localhost:5000/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password }),
+        });
+
+        if (response.ok) {
+          // Show success message and redirect to login
+          document.getElementById('success-message').style.display = 'block';
+          setTimeout(() => {
+            window.location.href = 'login.html';
+          }, 2000); // Redirect after 2 seconds
+        } else {
+          // Show error message
+          const data = await response.json();
+          document.getElementById('error-message').innerText = data.msg || 'An error occurred. Please try again.';
+          document.getElementById('error-message').style.display = 'block';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('error-message').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
